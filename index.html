@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
+	
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	
 .w3-row-padding img {margin-bottom: 12px}
+	
 .bgimg {
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +21,103 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   min-height: 100%;
 }
   
+/* map accordion slider css */
+	
+/*slideshow container*/
+	.slideshow-container {
+		max-width: 760px; 
+		position: relative; 
+		margin: auto;
+	}
+	
+/* hide images by default*/
+	.mySlides {
+		display: none;
+	}
+	
+/* next & previous buttons */
+	.prev, .next {
+		cursor: pointer; 
+		position: absolute; 
+		top: 50%; 
+		width: auto;
+		margin-top: -22px; 
+		padding: 16px; 
+		color: #d3d3d3; 
+		font-weight: bold; 
+		font-size: 18px; 
+		transition: 0.6s ease; 
+		border-radius 0 3px 3px 0; 
+		user-select: none; 
+	}
+
+/* position the next button to the right */
+	.next {
+		right: 0; 
+		border-radius: 3px 0 0 3px; 
+	}
+
+/* on hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+		background-color: rgba(0,0,0,0.8);
+	}
+
+/* caption text */
+	.text {
+		color: #f2f2f2; 
+		font-size: 15px; 
+		padding: 8px 12px; 
+		position: absolute; 
+		bottom: 8px; 
+		width: 100%; 
+		text-align: center; 
+	}
+	
+/* number text */
+	.numbertext {
+		color: #f2f2f2; 
+		font-size: 12px; 
+		padding: 8px 12px; 
+		position: absolute; 
+		top: 0; 
+	}
+	
+/* the dolts/bullets/indicates */
+	.dot {
+		cursor: pointer;
+		height: 15px; 
+		width: 15px; 
+		margin: 0 2px; 
+		background-color: #bbb;
+		border-radius: 50%; 
+		display: inline-block; 
+		transition: background-color 0.6s ease;
+	}
+	
+	.active, .dot:hover {
+		background-color: #717171; 
+	}
+	
+/* fading animation */
+	.fade {
+		  -webkit-animation-name: fade;
+ 		  -webkit-animation-duration: 1.5s;
+  		  animation-name: fade;
+	  	  animation-duration: 1.5s;
+	}
+	
+	@-webkit-keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+	
+	@keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+	}
+	
+	
+	
 </style>
 <body>
 
@@ -187,7 +288,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 	<br>
 <!-------------------------------------------THINGLINK SECTION--------------------------------------------------> 
   <div class="w3-content w3-justify w3-text-grey w3-padding-32">
-	
+	     <h4><center>Tap the animated buttons to learn more about the flood.</center></h4>
      <hr class="w3-opacity">
 	  <br>
   <!--THINGLINK SCRIPT-->
@@ -196,7 +297,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!--THINGLINK IMAGE-->
    <iframe width="960" height="504" data-original-width="3200" data-original-height="1680" src="https://www.thinglink.com/card/1378404025996673027" type="text/html" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen scrolling="no"></iframe>
 	  <br>
-     <h4><center>Tap the animated buttons to learn more about the flood.</center></h4>
+
  <br>
 
 <!-------------------------------RESULTS SECTION----------------------------->
@@ -206,6 +307,160 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <hr class="w3-opacity">
     <p>12 maps and 2 visualizations.</p>
     </div>
+	  
+<!--SLIDESHOW SCRIPT-->
+ <script>
+	  var slideIndex = 1;
+showSlides(slideIndex);
+
+//Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>		  
+
+<!---SLIDESHOW FOR MAPS 2005-2009 AND 2011-2015--->
+
+ <div class="slideshow-container">
+		  
+	     <!-- Full-width images with number and caption text --> 
+		  <div class="mySlides fade">
+			  <div class="numbertext">1 / 6</div>
+			  <img src="img/RESIZED_SEP2009_AnalyzedTracts-ALL_031421.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">2 / 6</div>
+			  <img src="img/RESIZED_SEP2009_AnalyzedTracts-SEP5_031421.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">3 / 6</div>
+			  <img src="img/RESIZED_SEP2009_AnalyzedTracts-SEP4_031421.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">4 / 6</div>
+			  <img src="img/RESIZED_SEP2009_AnalyzedTracts-SEP3_031421.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">5 / 6</div>
+			  <img src="img/RESIZED_SEP2009_AnalyzedTracts-SEP2_031421.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">6 / 6</div>
+			  <img src="img/RESIZED_SEP2009_AnalyzedTracts-SEP1_031421_NO2.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+             <!-- Next and previous buttons -->  
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	  </div>
+	  <br>
+	  
+	     <!-- The dots/circles -->
+	  	<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+	  </div>
+
+	  <br>
+	  <br>
+	  
+<!------------------------SLIDESHOW MAPS FOR 2011-2015-------------------------------->
+	  <div class="slideshow-container">
+		  
+	     <!-- Full-width images with number and caption text --> 
+		  <div class="mySlides fade">
+			  <div class="numbertext">1 / 6</div>
+			  <img src="img/RESIZED_SEP2015_all-tracts-with-tract.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">2 / 6</div>
+			  <img src="img/RESIZED_SEP2015_AnalyzedTracts-SEP5_043021.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">3 / 6</div>
+			  <img src="img/RESIZED_SEP2015_AnalyzedTracts-SEP4_043021.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">4 / 6</div>
+			  <img src="img/RESIZED_SEP2015_AnalyzedTracts-SEP3_043021.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">5 / 6</div>
+			  <img src="img/RESIZED_SEP2015_AnalyzedTracts-SEP2_043021.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+		  <div class="mySlides fade">
+			  <div class="numbertext">6 / 6</div>
+			  <img src="img/RESIZED_SEP2015_AnalyzedTracts-SEP1_043021.png" style="width:auto">
+			  <div class="text"></div>
+		  </div>
+		  
+             <!-- Next and previous buttons -->  
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	  </div>
+	  <br>
+	  
+	     <!-- The dots/circles -->
+	  	<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+	  </div>
+	</div>
+	
+	  <br>
+	  <br>
+	  
+
 <!----------------------------------FLOURISH VISUALIZATION SECTION------------------------------------------------->
   
   <!--FLOURISH SCRIPT-->
