@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html>
+<title>After the Great Flood</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('img/tanner-boriack-nashville.jpg');
+  min-height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="index.html/#gallery" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Gallery</a>
+    <a href="index.html/#background" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Background</a>
+    <a href="index.html/#results" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Results</a>
+    <a href="index.html/#resources" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Resources</a>
+    <a href="index.html/#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+    <a href="blog.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Blog</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>After the Great Flood:</b></h1>
+    <h2>An Interactive Research Project about Nashville's Great Flood of 2010</h2>
+    <img src="img/tanner-boriack-nashville.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
+    <img src="img/tanner-boriack-nashville.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
+    <!--<button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+      <i class="fa fa-download"></i> Download Resume
+    </button>-->
+  </header>
+
+ 
+  <!-- DATA AND METHODOLOGY Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="data-and-methodology">
+    <h2>Data and Methodology</h2>
+    <hr class="w3-opacity">
+    
+    <p>This project used data from two sources: 1) from the Nashville GIS Department and 2) from the U.S. Census Bureau’s American Community Survey 5 year estimates from 2005-2009 and 2011-2015.</p>
+   
+    <h3><u>American Community Survey, 5-Year Estimates, 2005-2009 and 2011-2015</u></h3>
+    <p>The U.S. Census Bureau offers annual (1), triennial (3),  and quinquennial (5) and decennial (10)  year data estimates on American households. The American Community Survey (ACS) collects data on social, economic, housing and demographic characteristics. The ACS presents data on characteristics such as education, marital status, occupation, health insurance coverage, housing occupancy, rent, age and race at various geographical levels. This project used the five-year estimates for 2005-2009 and 2011-2015 to represent the socieconomic and racial compositions of neighborhoods five years before and after the flood. </p>
+    
+    <h3><u>Nashville GIS Department: Flood Data</u></h3>
+    <p>The Nashville GIS Department collected data on the Great Flood of 2010, which provided census tract level information such as damage levels, building age and property type. The original dataset contained a total of 11,647 properties and 150 unique census tracts. This project only used census tracts that were located in Metropolitan Nashville and had socioeconomic positions (SEPs) in 2009 and 2015. Census tracts outside of the Metropolitan Nashville Area and without SEPs for 2009 <em>and</em> 2015 were excluded from this study. Only 97 unique census tracts were analyzed for this project.</p>
+ 
+    <br>
+  
+    <h3><b>Methodology</b></h3>
+    <p>Using the Modified Darden-Kamel Composite Socioeconomic Index, this project identified SEPs for census tracts in the Metropolitan Nashville Area.<p>
+    
+    <h3><u>The Modified Darden-Kamel Composite Socioeconomic Index</u></h3>
+    <p>The Modified Darden-Kamel Composite Socioeconomic Index (D-K CSI) uses quantitative methods to identify socioeconomic positions (SEP) for census tracts within a two- or three-county area. Using the U.S. Census Bureau American Community Survey, the methodology determines spatial inequality by evaluating the following nine socioeconomic characteristics: 
+      <ol>
+        <li>poverty</li>
+        <li>unemployment rate</li>
+        <li>median household income</li>
+        <li>percentage of vehicle ownership</li>
+        <li>percentage of professional & managerial workers</li>
+        <li>percentage of people holding a bachelor’s degree or other higher education</li>
+        <li>median house value</li>
+        <li>median monthly rent</li>
+        <li>percentage of home ownership</li>
+      </ol>
+    </p>
+    <p>This methodology has been previously used in health-related studies such as Moody et al. (2016), Darden & Rubalcava (2018), Barnes (2018) and Wilcox (2020). The articles focus on Metropolitan Detroit and research topics including blood lead levels, residential segregation among Hispanic and Non-Hispanic White population, asthma hospitalizations and health outcomes of diabetes, obesity and lack of sleep. Darden et al. (2010) first used the methodology to research residential segregation among Black and White populations. The Modified D-K CSI has not evaluated the socioeconomic effects of natural disasters.</p>
+
+ <h3><b>Limitations</b></h3>
+    <p>Limitation 1: The damage level was determined by each property owner and may be subjective. The collected data on the flood of 2010 does not include information on the damage level by race of property owner, which would be helpful to determine patterns in perceived damage level by race/ethnicity. The American Community Survey was instead employed to provide information on the racial composition of each census tract and calculated to find the average compositions for each SEP. The racial compositions of each SEP were found and used to determine which racial groups were overpopulated in each SEP in relation to socioeocnomic status and damage level. Although the owner's racial/ethnic information was not included in the dataset, the American Community Survey offered information for each of the census tracts analyzed in this study. This project was able to identify if one or more proportions of a race were uneven in different socioeconomic positions<p>
+    <p>Limitation 2: Some census tracts from 2005-2009 could not be analyzed because they had no SEP. To make the study completely comparable, data was excluded if it did not exist in 2005-2009 and 2011-2015 datasets. The American Community Survey data for 2005-2009 contained several census tracts in the Metropolitan Nashville Area that had missing variable data related the nine variables used in this analysis. Although excluding the data removed 53 census tracts from being analyzed, the project still maintained and analyzed approximately 64% of the census tracts in the original datasets.</p>  
+  
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    </div>
+    
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
+   
+    <p>Lets get in touch. Send me a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>-->
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    
+    <!--FACEBOOK SCRIPT--> 
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="8bQ8ugf9">
+  </script>
+  
+    <!--FACEBOOK SHARE BUTTON--> 
+     <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    
+    <!--TWITTER SCRIPT--> 
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+    <!-- TWITTER SHARE BUTTON, ADDED DIV TAGS-->
+     <div> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Get a glimpse into the socioeconomic effects of Metropolitan Nashville&#39;s Great Flood of 2010. Check out this redesigned project by @chi_initiative and @GEOatMSU grad, Kyeesha Wilcox." data-related="" data-show-count="false">Tweet</a></div>
+
+  
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
 
